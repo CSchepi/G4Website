@@ -57,8 +57,7 @@ function ButtonStart(){
         timePassed = 0;
         timerInterval= null;
     }
-    else{
-        console.log("HIII");
+    else{+
         startTimer();
         document.getElementById("Play").innerText="🗘"
     }
