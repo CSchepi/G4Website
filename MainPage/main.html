@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>▮▮▮▮▮▮</title>
+    <link rel="icon" href="../Img/Icon.png">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<br>
+    <h1>Welcome</h1>
+<br><br><br>
+    <div id="Timer">
+        <div id="app"></div>
+        <br>
+        <button id="Play" onclick="ButtonStart()">▶</button>
+    </div>
+<div class="addHint">
+    <div class="SepLine" id="RightStroke"></div>
+    <button class="SepButton" id="AH0" onclick="EnterHint(0)">+</button>
+    <div class="SepLine" id="leftStroke"></div>
+    <input class ="HI" id="HI0" type="text" placeholder="#0000" onchange="HintEntered(value, 0)">
+    <p class="HNum" id="HN0">OhHello</p>
+</div>
+<div id="Endblock">
+
+</div>
+
+<script src="Timer.js"></script>
+<script src="Main.js"></script>
+</body>
+
+</html>
