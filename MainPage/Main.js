@@ -42,10 +42,10 @@ function EnterHint(i){
     var HI = "HI"+i;
     document.getElementById(HI).style.display = "inline";
 }
-function HintEntered(code, i){
-    var HI = "HI"+i;
-    var AH = "AH"+i;
-    var HN = "HN"+i;
+function HintEntered(code, codeindex){
+    var HI = "HI"+codeindex;
+    var AH = "AH"+codeindex;
+    var HN = "HN"+codeindex;
 
 
     var valide = false;
@@ -105,10 +105,10 @@ function HintEntered(code, i){
 
         var htmlbreak = "<div class=\"addHint\">\n" +
             "    <div class=\"SepLine\" id=\"RightStroke\"></div>\n" +
-            "    <button class=\"SepButton\" id=\"AH"+(i+1)+"\" onclick=\"EnterHint("+(i+1)+")\">+</button>\n" +
+            "    <button class=\"SepButton\" id=\"AH"+(codeindex+1)+"\" onclick=\"EnterHint("+(codeindex+1)+")\">+</button>\n" +
             "    <div class=\"SepLine\" id=\"leftStroke\"></div>\n" +
-            "    <input class =\"HI\" id=\"HI"+(i+1)+"\" type=\"text\" placeholder=\"#0000\" onchange=\"HintEntered(value, "+(i+1)+")\">\n" +
-            "    <p class=\"HNum\" id=\"HN"+(i+1)+"\">OhHello</p>\n" +
+            "    <input class =\"HI\" id=\"HI"+(codeindex+1)+"\" type=\"text\" placeholder=\"#0000\" onchange=\"HintEntered(value, "+(codeindex+1)+")\">\n" +
+            "    <p class=\"HNum\" id=\"HN"+(codeindex+1)+"\">OhHello</p>\n" +
             "</div>"
         document.body.innerHTML += htmlbreak;
         document.getElementById("Endblock").style.top = document.body.offsetHeight+"px"
