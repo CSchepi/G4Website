@@ -11,6 +11,30 @@ var ArrowArray;
 var NumArray;
 var pointer = 0;
 
+function Num(i){
+    if(NumArray[pointer]==i){
+        pointer++;
+        if(pointer<ArrowArray.length){
+            document.getElementById("C2I").src ="../Img/ArrowPadBlanc.png";
+            setTimeout(()=>{
+                document.getElementById("C2I").src ="../Img/ArrowPad"+ArrowArray[pointer]+".png";
+            },200)
+        }
+        if(pointer+1==ArrowArray.length) {
+            var Buttons = document.getElementsByClassName("C2B");
+            for(var i =0; i< Buttons.length;i++){
+                Buttons[i].style.display="none";
+            }
+        }
+    }
+    else {
+        pointer = 0;
+        document.getElementById("C2I").src ="../Img/ArrowPadWrong.png";
+        setTimeout(()=>{
+            document.getElementById("C2I").src ="../Img/ArrowPad"+ArrowArray[0]+".png";
+        },1000)
+    }
+}
 
 function EnterHint(i){
     var HI = "HI"+i;
@@ -29,8 +53,8 @@ function HintEntered(code, i){
             if(Riddles[i][1]==1){
                 var htmlcaesar = "<div class=\"caesar\" id=\"R1\">\n" +
                     "    <div id=\"R1IS\"><img src=\"../Img/caesar.png\" id=\"R1I\">\n" +
-                    "        <div id=\"R1T\">khoor#jxqwkhu/#ohw#xv#phhw#dq#6sp1#Wkh#frgh#wr#wkh#vhuyhu#urrp#wklv#prqwk#lv#6090503</div>\n" +
-                    "    </div><input id = \"R1S\" type=\"range\" min=\"-20\" value = \"-20\" max=\"10\" oninput=\"caesarchange(value, 'khoor#jxqwkhu/#ohw#xv#phhw#dq#6sp1#Wkh#frgh#wr#wkh#vhuyhu#urrp#wklv#prqwk#lv#6090503')\">\n" +
+                    "        <div id=\"R1T\">"+Riddles[i][3]+"</div>\n" +
+                    "    </div><input id = \"R1S\" type=\"range\" min=\""+Riddles[i][4]+"\" value = \""+Riddles[i][4]+"\" max=\""+(Riddles[i][4]+30)+"\" oninput=\"caesarchange(value, '"+Riddles[i][3]+"')\">\n" +
                     "</div> " +
                     "<img id = blockCaesar src=\"https://img01.ztat.net/article/spp-media-p1/ddd9ed145d96395a80f3f2d9823d44bd/28bb35a2f0dd4cc1ac704cfe05462b82.jpg?imwidth=762\">";
                 document.body.innerHTML += htmlcaesar;
@@ -38,6 +62,30 @@ function HintEntered(code, i){
             if(Riddles[i][1]==0){
                 var htmlmap = "<div id=\"M0\"><img id=\"M0I\" src=\"https://media.istockphoto.com/vectors/office-building-plan-blueprint-vector-id479424781\"> <p>A map of the jewelry store!</p></div>";
                 document.body.innerHTML += htmlmap;
+            }
+            if(Riddles[i][1]==2){
+                ArrowArray = Riddles[i][4]
+                NumArray = Riddles[i][3]
+                console.log(NumArray);
+                var htmlnum = "<div id=\"C2\">\n" +
+                    "    <div id=\"C2Num\">\n" +
+                    "        <img id = \"C2I\" src=\"../Img/ArrowPad"+ArrowArray[0]+".png\">\n" +
+                    "        <button class= \"C2B\" id=\"C2B0\" onclick=\"Num(0)\"></button>\n" +
+                    "        <button class= \"C2B\" id=\"C2B1\" onclick=\"Num(1)\"></button>\n" +
+                    "        <button class= \"C2B\" id=\"C2B2\" onclick=\"Num(2)\"></button>\n" +
+                    "        <button class= \"C2B\" id=\"C2B3\" onclick=\"Num(3)\"></button>\n" +
+                    "        <button class= \"C2B\" id=\"C2B4\" onclick=\"Num(4)\"></button>\n" +
+                    "        <button class= \"C2B\" id=\"C2B5\" onclick=\"Num(5)\"></button>\n" +
+                    "        <button class= \"C2B\" id=\"C2B6\" onclick=\"Num(6)\"></button>\n" +
+                    "        <button class= \"C2B\" id=\"C2B7\" onclick=\"Num(7)\"></button>\n" +
+                    "        <button class= \"C2B\" id=\"C2B8\" onclick=\"Num(8)\"></button>\n" +
+                    "        <button class= \"C2B\" id=\"C2B9\" onclick=\"Num(9)\"></button>\n" +
+                    "    </div>\n" +
+                    "</div>" +
+                    "<img id = blockNum src=\"https://img01.ztat.net/article/spp-media-p1/ddd9ed145d96395a80f3f2d9823d44bd/28bb35a2f0dd4cc1ac704cfe05462b82.jpg?imwidth=762\">";
+
+                document.body.innerHTML += htmlnum;
+
             }
         }
     }

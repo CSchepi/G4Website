@@ -302,3 +302,7 @@ input[type=text]{
     left:61.6%;
     top:49.6%;
 }
+#blockNum{
+    height: 30vw;
+    opacity: 0;
+}
