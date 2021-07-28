@@ -1,6 +1,8 @@
 var Riddles;
 var request = new XMLHttpRequest();
-request.open("GET", "./Riddles.json", true);
+request.open("GET", "https://api.jsonbin.io/b/610153ea99892a4ae9abc9ad", false);
+request.setRequestHeader('Access-Control-Allow-Origin', '*');
+request.setRequestHeader('X-Master-Key', '$2b$10$fy9KWIe7AmD9cvMTqAlMTOB5L7hcp1gAlJYl/kUkmu1Va42vMNqRG');
 request.onload =function (){
     Riddles = JSON.parse(request.responseText);
     console.log(Riddles);
