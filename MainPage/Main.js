@@ -1,6 +1,6 @@
 var Riddles;
 var request = new XMLHttpRequest();
-request.open("GET", "./Riddles.json", false);
+request.open("GET", "./Riddles.json", true);
 request.onload =function (){
     Riddles = JSON.parse(request.responseText);
     console.log(Riddles);
