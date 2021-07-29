@@ -306,3 +306,119 @@ input[type=text]{
     height: 30vw;
     opacity: 0;
 }
+#ElevSol{
+    text-align: center;
+    display: none;
+}
+#SignImg{
+    position: absolute;
+    width: 50%;
+    aspect-ratio: 2/1.2;
+    left: 25%;
+}
+#TranslateText{
+    position: absolute;
+    left: 30%;
+    width:40%;
+    text-align: center;
+    color: black;
+    font-size: 3vw;
+}
+#CopyTranslate{
+    position: absolute;
+    left: 40%;
+    margin-top: 30vw;;
+    transition: none;
+    height: 2vw;
+    border-radius: 0;
+    width: 20%;
+    background-color: gray;
+    border-color: darkslategray;
+    color: #EEFFEE;
+}
+#blockRussia{
+    height: 32vw;
+    opacity: 0;
+}
+#ColorRiddle{
+    position: absolute;
+    width: 20%;
+    aspect-ratio:1/1;
+    left: 40%;
+}
+#ColDisp{
+    width: 100%;
+}
+.ColorHelp{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    left: 120%;
+    top: 5%;
+}
+.ColorCircle{
+    position: absolute;
+    margin-left: 0px;
+    height: 3vw;
+    width: 3vw;
+    top:-0.75vw;
+    background-color: #EEFFEE;
+    border-radius: 50%;
+}
+#CC1{
+    background-color: orange;
+}
+#CC2{
+    background-color: hotpink;
+}
+#CC3{
+    background-color: deepskyblue;
+}
+#CC4{
+    background-color: limegreen;
+}
+#CH1{
+    color: orange;
+}
+#CH2{
+    top:25%;
+    color: hotpink;
+}
+#CH3{
+    top:45%;
+    color: deepskyblue;
+}
+#CH4{
+    top:65%;
+    color: limegreen;
+}
+#CRoom1{
+    position: absolute;
+    width: 100%;
+    top: 27%;
+    left:2%;
+    text-align: center;
+    font-size: 2vw;
+    color: orange;
+    text-shadow: none;
+    text-shadow: black 0.1vw 0.1vw 0.1vw;
+}
+#CPotion{
+    position: absolute;
+    top:25%;
+    left:35%;
+    width: 6vw;
+}
+#blockcol{
+    height: 22vw;
+    opacity: 0;
+}
+
+#chint{
+    position: absolute;
+    width: 50%;
+    left:25%;
+    font-size: 1.5vw;
+    margin-top: 0;
+}
