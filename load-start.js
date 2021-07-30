@@ -58,7 +58,7 @@ function addletter(i){
 addletter(0);
 
 setTimeout(()=>{
-    window.location.href = "./login.html";
+    window.location.href = "./MainPage/main.html";
 },11000)
 
 bar.style.width="30%";
