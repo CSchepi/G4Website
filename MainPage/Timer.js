@@ -16,7 +16,7 @@ const COLOR_CODES = {
     }
 };
 
-const TIME_LIMIT = 1200;
+const TIME_LIMIT = 1800;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -53,7 +53,7 @@ function onTimesUp() {
 
 function ButtonStart(){
     if(but.innerText =="🗘"){
-        timeLeft = 1200;
+        timeLeft = 1800;
         timePassed = 0;
         timerInterval= null;
     }
